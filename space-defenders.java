@@ -21,12 +21,12 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class SpaceInvaders extends Application {
+public class SpaceDefenders extends Application {
 	
 
 	private static final Random random = new Random();
-	static final Image Spaceship = new Image("file:/Users/nimarahimian/Downloads/Space-Invaders-master/images/starshiip.png"); 
-	static final Image Explosion = new Image("file:/Users/nimarahimian/Downloads/Space-Invaders-master/images/explosionny.png");
+	static final Image Spaceship = new Image("file:/1.png"); 
+	static final Image Explosion = new Image("file:/2.png");
 	static final int Explosion_widht = 510;
 	static final int Explosion_height = 510;
 	static final int Explosion_rows = 8;
@@ -34,16 +34,9 @@ public class SpaceInvaders extends Application {
 	static final int EXPLOSION_STEPS = 64;
 	
 	static final Image Meteors [] = {
-			new Image("file:/Users/nimarahimian/Downloads/Space-Invaders-master/images/1.png"),
-			new Image("file:/Users/nimarahimian/Downloads/Space-Invaders-master/images/2.png"),
-			new Image("file:/Users/nimarahimian/Downloads/Space-Invaders-master/images/3.png"),
-			new Image("file:/Users/nimarahimian/Downloads/Space-Invaders-master/images/4.png"),
-			new Image("file:/Users/nimarahimian/Downloads/Space-Invaders-master/images/6.png"),
-			new Image("file:/Users/nimarahimian/Downloads/Space-Invaders-master/images/7.png"),
-			new Image("file:/Users/nimarahimian/Downloads/Space-Invaders-master/images/8.png"),
-			new Image("file:/Users/nimarahimian/Downloads/Space-Invaders-master/images/9.png"),
-
-			
+			new Image("file:/3.png"),
+			new Image("file:/4.png"),
+			new Image("file:/5.png")	
 	};
 	
 	private double player_position;
@@ -63,8 +56,9 @@ public class SpaceInvaders extends Application {
 		canvas.setCursor(Cursor.MOVE);
 		canvas.setOnMouseMoved(e -> player_position = e.getX());
 		canvas.setOnMouseClicked(e -> {
-			if(shots.size() < MAX_SHOTS) shots.add(player.shoot());
-			if(gameOver) { 
+			if (shots.size() < MAX_SHOTS) {
+				shots.add(player.shoot())}
+			if (gameOver) { 
 				gameOver = false;
 				setup();
 			}
@@ -224,7 +218,7 @@ public class SpaceInvaders extends Application {
 		}
 	}
 
-	//bullets
+	
 	public class Shot {
 		
 		public boolean toRemove;
