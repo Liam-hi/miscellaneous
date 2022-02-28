@@ -1,6 +1,6 @@
 package application;
 
-// Gjorde spelet enligt en tutorial. Har i efterhand gjort om grafiken, scenen och spellogiken. 
+
 
 import java.util.ArrayList;
 import java.util.List;
